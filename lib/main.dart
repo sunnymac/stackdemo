@@ -9,20 +9,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Material App',
-        home: Stack(
-          children: [
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.amber,
-            ),
-            Text("Hello World"),
-            Container(
-              height: 500,
-              width: 500,
-              color: Colors.red,
-            )
-          ],
+        home: Scaffold(
+          body: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                height: 500,
+                width: 500,
+                color: Colors.red,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.amber,
+              ),
+              const Text("Hello World"),
+            ],
+          ),
         ));
   }
 }
